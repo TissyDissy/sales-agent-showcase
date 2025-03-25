@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技術架構 - 銷冠AI主播</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo.png" alt="銷冠Logo" width="40" class="me-2">
+                銷冠 AI 主播
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">功能詳情</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="demo.html">演示</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tech.html">技術架構</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="display-4 fw-bold">技術架構</h1>
+                <p class="lead">深入了解銷冠AI主播的技術實現</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10 text-center">
+                    <div class="card shadow-lg border-0 mb-4">
+                        <div class="card-body p-0">
+                            <img src="assets/architecture.png" alt="系統架構圖" class="img-fluid">
+                        </div>
+                    </div>
+                    <p class="lead">銷冠AI主播採用模塊化、分布式架構設計，各功能模塊獨立部署，提供高可用性和擴展性。</p>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h3 class="card-title h5 mb-0">核心技術堆疊</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="mb-4">
+                                <h4 class="h6 fw-bold">大型語言模型</h4>
+                                <p>使用 InternLM2 作為基礎大語言模型，通過 xtuner 框架進行指令微調，使模型具備銷售主播的專業能力。</p>
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="h6 fw-bold">推理加速</h4>
+                                <p>集成 LMDeploy 加速推理，使用 KV Cache 技術與 Turbomind 引擎，大幅提升推理效率，降低響應延遲。</p>
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="h6 fw-bold">RAG 檢索增強</h4>
+                                <p>基於向量數據庫實現檢索增強生成，確保AI主播回答時能精準引用產品說明書內容。</p>
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="h6 fw-bold">語音處理</h4>
+                                <p>TTS 使用 GPT-SoVITS 實現高質量語音合成，ASR 採用 FunASR 提供準確的語音識別能力。</p>
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="h6 fw-bold">數字人生成</h4>
+                                <p>結合 ComfyUI Workflow 實現逼真的數字人視頻生成，支持多種風格和形象。</p>
+                            </div>
+                            <div>
+                                <h4 class="h6 fw-bold">Agent 能力</h4>
+                                <p>基於 lagent 框架，實現網絡查詢功能，可檢索物流、天氣等實時信息。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h3 class="card-title h5 mb-0">系統架構</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="mb-4">
+                                <h4 class="h6 fw-bold">前端技術</h4>
+                                <p>使用 Vue.js + Pinia + Element Plus 搭建前端，提供現代化、高效的用戶界面。支持響應式設計，適配不同設備。</p>
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="h6 fw-bold">後端技術</h4>
+                                <p>採用 FastAPI + Uvicorn 構建高性能後端服務，提供 RESTful API，支持非同步處理，大幅提升系統吞吐量。</p>
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="h6 fw-bold">數據庫</h4>
+                                <p>採用 PostgreSQL 作為關係型數據庫，存儲商品信息、用戶互動記錄等數據，確保數據一致性和可靠性。</p>
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="h6 fw-bold">部署方案</h4>
+                                <p>使用 Docker-Compose 實現一鍵部署，支持服務編排，便於擴展和維護。可根據需求靈活調整各模塊的資源分配。</p>
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="h6 fw-bold">模塊化設計</h4>
+                                <p>系統採用微服務架構，各功能模塊（LLM、TTS、ASR、數字人生成等）獨立部署，可根據需求靈活擴展。</p>
+                            </div>
+                            <div>
+                                <h4 class="h6 fw-bold">安全機制</h4>
+                                <p>實現 JWT 身份驗證，確保API安全；數據傳輸加密；敏感信息保護機制，保障系統和用戶數據安全。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h3 class="card-title h5 mb-0">硬件需求</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>服務名稱</th>
+                                            <th>顯存需求</th>
+                                            <th>推薦配置</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>TTS 服務</td>
+                                            <td>2G (1668MB)</td>
+                                            <td>任何支持CUDA的顯卡</td>
+                                        </tr>
+                                        <tr>
+                                            <td>數字人服務</td>
+                                            <td>5G (4734MB)</td>
+                                            <td>NVIDIA RTX 系列顯卡</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ASR 服務</td>
+                                            <td>5.5G (5562MB)</td>
+                                            <td>NVIDIA RTX 系列顯卡</td>
+                                        </tr>
+                                        <tr>
+                                            <td>RAG 服務</td>
+                                            <td>2G (1974MB)</td>
+                                            <td>任何支持CUDA的顯卡</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LLM - lelemiao-7b</td>
+                                            <td>16G (16060MB)</td>
+                                            <td>建議使用 40G 顯卡</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LLM - lelemiao-7b-4bit</td>
+                                            <td>6.5G (6406MB)</td>
+                                            <td>可以適配 24G 顯卡</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="alert alert-info mt-3">
+                                <i class="bi bi-info-circle-fill me-2"></i>根據實際部署需求，可靈活選擇使用完整版或量化版模型。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h3 class="card-title h5 mb-0">開源技術致謝</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">大語言模型技術</h5>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><a href="https://github.com/InternLM/InternLM" target="_blank">InternLM</a></li>
+                                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><a href="https://github.com/InternLM/xtuner" target="_blank">xtuner</a></li>
+                                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><a href="https://github.com/InternLM/LMDeploy" target="_blank">LMDeploy</a></li>
+                                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><a href="https://github.com/InternLM/HuixiangDou" target="_blank">HuixiangDou</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">語音與視覺技術</h5>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><a href="https://github.com/RVC-Boss/GPT-SoVITS" target="_blank">GPT-SoVITS</a></li>
+                                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><a href="https://github.com/TMElyralab/MuseTalk" target="_blank">MuseTalk</a></li>
+                                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><a href="https://github.com/modelscope/FunASR" target="_blank">FunASR</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Agent與工具集</h5>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i><a href="https://github.com/InternLM/lagent" target="_blank">lagent</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <p class="mb-0">感謝上海人工智能實驗室推出的書生·浦語大模型實戰營，為本專案提供寶貴的技術指導和強大的算力支持。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">開始使用銷冠AI主播</h2>
+                <p class="lead mb-4">體驗AI技術為您的銷售帶來的革命性變化</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a href="demo.html" class="btn btn-primary btn-lg px-4 gap-3">查看演示</a>
+                    <a href="https://github.com/PeterH0323/Streamer-Sales" class="btn btn-outline-primary btn-lg px-4" target="_blank">
+                        <i class="bi bi-github me-2"></i>訪問GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>銷冠 — 卖货主播大模型</h5>
+                    <p class="small">一個能夠根據商品特點從激發用戶購買意願角度出發進行商品解說的AI銷售主播平台。</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="https://github.com/PeterH0323/Streamer-Sales" class="text-white" target="_blank">
+                                <i class="bi bi-github fs-4"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-3">
+                            <a href="#" class="text-white">
+                                <i class="bi bi-twitter fs-4"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-3">
+                            <a href="#" class="text-white">
+                                <i class="bi bi-linkedin fs-4"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="small mt-3 mb-0">© 2025 銷冠主播. 保留所有權利.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
