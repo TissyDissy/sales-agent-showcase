@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>演示 - 銷冠AI主播</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .demo-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .demo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        .chat-container {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        .message {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 1rem;
+            max-width: 80%;
+        }
+        .user {
+            background-color: #e9ecef;
+            margin-left: auto;
+            border-bottom-right-radius: 0;
+        }
+        .bot {
+            background-color: #0d6efd;
+            color: white;
+            margin-right: auto;
+            border-bottom-left-radius: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/logo.png" alt="銷冠Logo" width="40" class="me-2">
+                銷冠 AI 主播
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="features.html">功能詳情</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="demo.html">演示</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tech.html">技術架構</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="display-4 fw-bold">系統演示</h1>
+                <p class="lead">親身體驗銷冠AI主播的強大功能</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="card demo-card shadow-sm h-100">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h3 class="card-title h5 mb-0">視頻演示</h3>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="銷冠主播演示視頻" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white p-4">
+                            <h4 class="h5 fw-bold mb-3">視頻功能展示</h4>
+                            <p>此視頻展示了銷冠AI主播的核心功能，包括文案生成、語音合成、數字人互動等全面應用場景。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card demo-card shadow-sm h-100">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h3 class="card-title h5 mb-0">交互式演示</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="chat-container mb-3">
+                                <div class="d-flex flex-column">
+                                    <div class="message bot">
+                                        <p class="mb-0">家人們，大家好呀！你們的甜心主播乐乐喵已加載完畢，等待你們一鍵簽收！有什麼想了解的商品，儘管告訴我哦~</p>
+                                    </div>
+                                    <div class="message user">
+                                        <p class="mb-0">介紹一下這款智能手錶吧</p>
+                                    </div>
+                                    <div class="message bot">
+                                        <p class="mb-0">家人們，這款智能手錶真的是太太太太絕了！不僅有超長續航能力，一次充電可以用7天，還防水防塵，運動游泳都沒問題呢！而且健康監測功能超全的，心率、血氧、睡眠質量都能幫你記錄得清清楚楚，讓你掌握自己的健康狀態~現在活動期間購買還送精美錶帶哦，真的是太划算了！家人們快來搶購吧！</p>
+                                    </div>
+                                    <div class="message user">
+                                        <p class="mb-0">它的防水級別是多少？可以游泳嗎？</p>
+                                    </div>
+                                    <div class="message bot">
+                                        <p class="mb-0">當然可以游泳啦，家人們！這款智能手錶的防水級別達到了IP68，支持50米深度防水，不管是日常洗手洗臉，還是去游泳、沖浪都沒有問題的哦！不過溫馨提示，不建議在高溫蒸汽環境使用，比如洗桑拿的時候最好取下來~這麼強大的防水功能，是不是超級實用呀？</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="輸入您的問題..." disabled>
+                                <button class="btn btn-primary" type="button" disabled>
+                                    <i class="bi bi-send"></i>
+                                </button>
+                            </div>
+                            <div class="text-center mt-3">
+                                <small class="text-muted">此為靜態演示，請訪問在線Demo體驗完整功能</small>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white p-4">
+                            <h4 class="h5 fw-bold mb-3">在線體驗</h4>
+                            <p>想要親自體驗銷冠AI主播的強大功能？點擊下方按鈕訪問在線Demo進行實時交互。</p>
+                            <a href="https://openxlab.org.cn/apps/detail/HinGwenWong/Streamer-Sales" class="btn btn-primary" target="_blank">
+                                <i class="bi bi-box-arrow-up-right me-2"></i>訪問在線Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="card demo-card shadow-sm">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h3 class="card-title h5 mb-0">功能展示圖庫</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="card">
+                                        <img src="assets/screenshot-1.png" class="card-img-top" alt="管理後台">
+                                        <div class="card-body">
+                                            <h5 class="card-title">管理後台</h5>
+                                            <p class="card-text">銷冠AI主播的後台管理界面，可管理商品、查看對話歷史。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card">
+                                        <img src="assets/screenshot-2.png" class="card-img-top" alt="交互界面">
+                                        <div class="card-body">
+                                            <h5 class="card-title">交互界面</h5>
+                                            <p class="card-text">用戶可以與銷冠AI主播進行實時對話，獲取商品信息。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card">
+                                        <img src="assets/screenshot-3.png" class="card-img-top" alt="數字人演示">
+                                        <div class="card-body">
+                                            <h5 class="card-title">數字人演示</h5>
+                                            <p class="card-text">銷冠AI主播的數字人形象，提供生動的視覺互動體驗。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card demo-card shadow-sm">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h3 class="card-title h5 mb-0">案例分享</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">電商平台應用案例</h5>
+                                            <p class="card-text">某知名電商平台導入銷冠AI主播後，銷售轉化率提升30%，客服響應時間縮短50%，大幅提升用戶滿意度。</p>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>24小時不間斷服務</li>
+                                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>精準回答商品問題</li>
+                                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>提高用戶購買決策效率</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title">直播帶貨應用案例</h5>
+                                            <p class="card-text">某直播平台使用銷冠AI主播輔助人類主播進行帶貨，內容質量和準確度大幅提升，銷售效果提升40%。</p>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>快速生成專業商品講解</li>
+                                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>實時回應用戶提問</li>
+                                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>幫助主播減輕工作負擔</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">開始使用銷冠AI主播</h2>
+                <p class="lead mb-4">體驗AI技術為您的銷售帶來的革命性變化</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a href="https://openxlab.org.cn/apps/detail/HinGwenWong/Streamer-Sales" class="btn btn-primary btn-lg px-4 gap-3" target="_blank">
+                        <i class="bi bi-box-arrow-up-right me-2"></i>體驗在線Demo
+                    </a>
+                    <a href="https://github.com/PeterH0323/Streamer-Sales" class="btn btn-outline-primary btn-lg px-4" target="_blank">
+                        <i class="bi bi-github me-2"></i>訪問GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>銷冠 — 卖货主播大模型</h5>
+                    <p class="small">一個能夠根據商品特點從激發用戶購買意願角度出發進行商品解說的AI銷售主播平台。</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="https://github.com/PeterH0323/Streamer-Sales" class="text-white" target="_blank">
+                                <i class="bi bi-github fs-4"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-3">
+                            <a href="#" class="text-white">
+                                <i class="bi bi-twitter fs-4"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-3">
+                            <a href="#" class="text-white">
+                                <i class="bi bi-linkedin fs-4"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="small mt-3 mb-0">© 2025 銷冠主播. 保留所有權利.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
