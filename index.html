@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>銷冠 — 卖货主播大模型</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo.png" alt="銷冠Logo" width="40" class="me-2">
+                銷冠 AI 主播
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">功能特點</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#demo">演示</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#architecture">技術架構</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">銷冠 — 卖货主播大模型</h1>
+                    <p class="lead mb-4">一個能夠根據商品特點從激發用戶購買意願角度出發進行商品解說的AI銷售主播平台。</p>
+                    <p class="mb-4">以其獨特的智能魅力，銷冠主播將徹底改變您的銷售體驗。該模型能深度理解商品特點，以生動、精準的語言為商品量身打造解說詞，讓每一件商品都煥發出誘人的光彩。</p>
+                    <div class="d-grid gap-2 d-md-flex">
+                        <a href="#features" class="btn btn-primary btn-lg px-4">了解更多</a>
+                        <a href="#demo" class="btn btn-outline-primary btn-lg px-4">查看演示</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 text-center">
+                    <img src="assets/hero-image.png" alt="銷冠主播展示" class="img-fluid rounded-3 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">強大功能</h2>
+                <p class="lead">銷冠主播擁有豐富而強大的功能，讓您的銷售更加高效</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white mb-3">
+                                <i class="bi bi-file-earmark-text"></i>
+                            </div>
+                            <h3 class="card-title h5 fw-bold">主播文案一鍵生成</h3>
+                            <p class="card-text">根據商品特點自動生成專業、吸引人的銷售文案，節省時間提高效率。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white mb-3">
+                                <i class="bi bi-rocket-takeoff"></i>
+                            </div>
+                            <h3 class="card-title h5 fw-bold">推理加速</h3>
+                            <p class="card-text">採用KV cache + Turbomind技術，提供快速響應的用戶體驗。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white mb-3">
+                                <i class="bi bi-book"></i>
+                            </div>
+                            <h3 class="card-title h5 fw-bold">RAG檢索增強生成</h3>
+                            <p class="card-text">利用檢索增強生成技術，確保生成內容準確反映商品信息。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white mb-3">
+                                <i class="bi bi-volume-up"></i>
+                            </div>
+                            <h3 class="card-title h5 fw-bold">TTS文字轉語音</h3>
+                            <p class="card-text">文字內容自動轉換為自然、帶有感情的語音輸出。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white mb-3">
+                                <i class="bi bi-person-video3"></i>
+                            </div>
+                            <h3 class="card-title h5 fw-bold">數字人生成</h3>
+                            <p class="card-text">創建逼真的數字人形象，為您的品牌帶來獨特的視覺識別。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white mb-3">
+                                <i class="bi bi-globe"></i>
+                            </div>
+                            <h3 class="card-title h5 fw-bold">Agent網絡查詢</h3>
+                            <p class="card-text">智能代理能力，可實時查詢物流信息、天氣等數據，增強交互體驗。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white mb-3">
+                                <i class="bi bi-mic"></i>
+                            </div>
+                            <h3 class="card-title h5 fw-bold">ASR語音轉文字</h3>
+                            <p class="card-text">支持語音輸入，實現與AI主播的自然對話互動。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white mb-3">
+                                <i class="bi bi-layers"></i>
+                            </div>
+                            <h3 class="card-title h5 fw-bold">Vue前端框架</h3>
+                            <p class="card-text">使用Vue + pinia + element-plus搭建前端，可自由擴展快速開發。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white mb-3">
+                                <i class="bi bi-server"></i>
+                            </div>
+                            <h3 class="card-title h5 fw-bold">高性能後端</h3>
+                            <p class="card-text">採用FastAPI + Uvicorn + PostgreSQL，高性能，高效編碼，生產可用。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">系統演示</h2>
+                <p class="lead">了解銷冠主播如何在實際場景中應用</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="ratio ratio-16x9 shadow-lg rounded overflow-hidden">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="銷冠主播演示視頻" allowfullscreen></iframe>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <a href="https://openxlab.org.cn/apps/detail/HinGwenWong/Streamer-Sales" class="btn btn-primary btn-lg" target="_blank">
+                            <i class="bi bi-box-arrow-up-right me-2"></i>體驗線上Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">技術架構</h2>
+                <p class="lead">銷冠AI主播的強大技術支持</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <img src="assets/architecture.png" alt="系統架構圖" class="img-fluid shadow-lg rounded mb-4">
+                </div>
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="h4 fw-bold mb-3">技術堆疊</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>大型語言模型：InternLM2</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>微調框架：xtuner</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>推理加速：LMDeploy</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>語音合成：GPT-SoVITS</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>前端框架：Vue.js + Element Plus</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>後端框架：FastAPI + Uvicorn</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>數據庫：PostgreSQL</li>
+                                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>部署工具：Docker-compose</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-5 fw-bold mb-4">開始使用銷冠主播</h2>
+                    <p class="lead mb-5">無論是線上直播銷售，還是線下門店推廣，銷冠主播都能成為您不可或缺的得力助手。</p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <a href="https://github.com/PeterH0323/Streamer-Sales" class="btn btn-primary btn-lg px-4 gap-3" target="_blank">
+                            <i class="bi bi-github me-2"></i>訪問GitHub
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary btn-lg px-4">
+                            <i class="bi bi-envelope me-2"></i>聯絡我們
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>銷冠 — 卖货主播大模型</h5>
+                    <p class="small">一個能夠根據商品特點從激發用戶購買意願角度出發進行商品解說的AI銷售主播平台。</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="https://github.com/PeterH0323/Streamer-Sales" class="text-white" target="_blank">
+                                <i class="bi bi-github fs-4"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-3">
+                            <a href="#" class="text-white">
+                                <i class="bi bi-twitter fs-4"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item ms-3">
+                            <a href="#" class="text-white">
+                                <i class="bi bi-linkedin fs-4"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="small mt-3 mb-0">© 2025 銷冠主播. 保留所有權利.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
